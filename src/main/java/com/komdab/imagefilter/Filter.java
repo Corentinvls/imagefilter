@@ -1,19 +1,13 @@
 package com.komdab.imagefilter;
 
-
-
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
 import org.bytedeco.opencv.opencv_core.Mat;
 import org.bytedeco.opencv.opencv_core.Size;
 import org.opencv.imgproc.Imgproc;
 
-
-
-
 public class Filter
 {
-
     public static void Blur(ImagePath imagePath, int paramFilter)
     {
         Mat image = imread(imagePath.getImagePathIn());
@@ -26,7 +20,6 @@ public class Filter
 
     public static void Dilate(ImagePath imagePath, int paramFilter)
     {
-
         Mat image = imread(imagePath.getImagePathIn());
         if (image != null)
         {
@@ -35,8 +28,6 @@ public class Filter
             imwrite(imagePath.getImagePathOut(), image);
         }
     }
-
-
 
     public static void Grayscale(ImagePath imagePath)
     {

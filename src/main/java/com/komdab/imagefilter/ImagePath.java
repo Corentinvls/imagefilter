@@ -1,47 +1,56 @@
 package com.komdab.imagefilter;
 
-import java.io.File;
-import java.util.Objects;
-
-public class ImagePath {
+public class ImagePath
+{
     private String pathIn;
     private String pathOut;
     private String fileName;
 
-    public ImagePath(String pathIn, String pathOut, String fileName) {
+    public ImagePath(String pathIn, String pathOut, String fileName)
+    {
         this.pathIn = pathIn;
         this.pathOut = pathOut;
         this.fileName = fileName;
     }
 
-    public String getPathIn() {
+    public String getPathIn()
+    {
         return pathIn;
     }
 
-    public void setPathIn(String pathIn) {
+    public void setPathIn(String pathIn)
+    {
         this.pathIn = pathIn;
     }
 
-    public String getPathOut() {
+    public String getPathOut()
+    {
         return pathOut;
     }
 
-    public void setPathOut(String pathOut) {
+    public void setPathOut(String pathOut)
+    {
         this.pathOut = pathOut;
     }
 
-    public String getFileName() {
+    public String getFileName()
+    {
         return fileName;
     }
 
-    public void setFileName(String fileName) {
+    public void setFileName(String fileName)
+    {
         this.fileName = fileName;
     }
 
-    public String getImagePathIn() {
+    public String getImagePathIn()
+    {
         return this.pathIn + "/" + this.fileName;
 
-    } public String getImagePathOut() {
+    }
+
+    public String getImagePathOut()
+    {
         return this.pathOut + "/" + this.fileName;
     }
 
