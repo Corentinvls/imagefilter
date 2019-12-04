@@ -1,5 +1,8 @@
 package com.komdab.imagefilter;
 
+import java.io.File;
+import java.util.Objects;
+
 public class ImagePath {
     private String pathIn;
     private String pathOut;
@@ -41,4 +44,6 @@ public class ImagePath {
     } public String getImagePathOut() {
         return this.pathOut + "/" + this.fileName;
     }
+
+
 }

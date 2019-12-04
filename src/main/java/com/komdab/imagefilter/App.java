@@ -8,17 +8,13 @@ public class App {
     public static void main(String[] args) {
 
         ArrayList<ImagePath> imagePathMap;
+         Tools.process(args);
 
-
-        File dir = new File("image");
-        for(File f : dir.listFiles()){
-            System.out.println(f.getName());
-            if(!f.getName().equals(".DS_Store")){
-                Filter filter = new Filter("image", "output_image", f.getName());
-                filter.smooth();
-            }
 
         }
 
-    }
+
+
+
+
 }
