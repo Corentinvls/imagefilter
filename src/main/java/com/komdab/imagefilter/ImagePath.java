@@ -41,7 +41,9 @@ public class ImagePath {
     public String getImagePathIn() {
         return this.pathIn + "/" + this.fileName;
 
-    } public String getImagePathOut() {
+    }
+
+    public String getImagePathOut() {
         return this.pathOut + "/" + this.fileName;
     }
 
