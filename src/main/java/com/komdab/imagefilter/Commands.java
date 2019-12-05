@@ -11,14 +11,15 @@ import java.util.Arrays;
 
 public class Commands {
 
+    public static Logger logger;
     private static Options options;
 
     private static void createOptions() {
         options = new Options();
-        Option filter = Option.builder().longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
-        Option help = Option.builder().longOpt("h").desc("Return this message").build();
-        Option input = Option.builder().longOpt("i").argName("directory").desc("Select input directory from pictures").hasArg().build();
-        Option output = Option.builder().longOpt("o").argName("directory").desc("Select output directory from pictures").hasArg().build();
+        Option filter = Option.builder("f").longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
+        Option help = Option.builder("h").longOpt("help").desc("Return this message").build();
+        Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
+        Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
@@ -32,15 +33,18 @@ public class Commands {
     }
 
     public static void verifyCli(String[] args) {
-        App.logger.write(Arrays.toString(args));
+
         CommandLine line;
         try {
-            line = Commands.commandCreate(args);
             Ini ini = new Ini(new File("config.ini"));
-
+            logger = new Logger(ini.get("config", "logFile"));
+            Tools.annonce(true);
+            logger.write(Arrays.toString(args));
+            line = Commands.commandCreate(args);
             String[] filters = ini.get("config", "filters").split("\\|");
             String input = ini.get("config", "inputDir");
             String output = ini.get("config", "outputDir");
+
             if (line.hasOption("h")) {
                 Commands.help();
                 return;
@@ -53,33 +57,45 @@ public class Commands {
                 if (input.isEmpty()) {
                     String s = "No input directory enter !";
                     System.out.println(s);
-                    App.logger.write(s);
+                    logger.write(s);
                     return;
                 }
+            }
+            if(!new File(input).exists())
+            {
+                String s = "Directory " + input + " not found !";
+                System.out.println(s);
+                logger.write(s);
+                return;
             }
             if (line.hasOption("o")) {
                 output = line.getOptionValue("o");
                 if (output.isEmpty()) {
                     String s = "No output directory enter !";
                     System.out.println(s);
-                    App.logger.write(s);
+                    logger.write(s);
                     return;
                 }
             }
-            String s = "Process started...";
+            if(new File(output).mkdir())
+            {
+                String s = "New output directory " + output + " created !";
+                System.out.println(s);
+                logger.write(s);
+            }
+
+            String s = "Process started...\ninput directory : " + input + "\noutput directory : " + output;
             System.out.println(s);
-            App.logger.write(s);
+            logger.write(s);
             Tools.process(input, output, filters);
             s = "Process finished !";
             System.out.println(s);
-            App.logger.write(s);
+            logger.write(s);
         } catch (ParseException e) {
             String s = "Command error !";
             System.out.println(s);
-            App.logger.write(s);
+            logger.write(s);
             System.out.println("Command error, wrong entry");
-        } catch (InvalidFileFormatException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

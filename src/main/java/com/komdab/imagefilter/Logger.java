@@ -10,10 +10,10 @@ public class Logger
     private File file;
     private String nameFile;
 
-    public  Logger()
+    public  Logger(String nameFile)
     {
-        nameFile = "image.log";
-        file = new File(nameFile);
+        this.nameFile = nameFile;
+        file = new File(this.nameFile);
         try
         {
             if (file.createNewFile())

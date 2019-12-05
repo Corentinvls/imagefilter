@@ -1,11 +1,19 @@
 package com.komdab.imagefilter;
 
+import org.bytedeco.opencv.presets.opencv_core;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class Tools {
+    public static void annonce(boolean starting)
+    {
+        String s = starting ? "App imageFilter has started..." : "App imageFilter has finished...";
+        System.out.println(s);
+        Commands.logger.write(s);
+    }
 
     public static void process(String inputDir, String outputDir, String[] filters) {
 
@@ -21,7 +29,7 @@ public class Tools {
                     } catch (Exception e) {
                         String s = "Invalid parameter. Can't convert " + args[1] + " to an integer number !";
                         System.out.println(s);
-                        App.logger.write(s);
+                        Commands.logger.write(s);
                         return;
                     }
                 }
@@ -37,18 +45,22 @@ public class Tools {
                         case "grayscale":
                             Filter.grayscale(imagePath);
                             break;
+                        default:
+                            String s = imagePath.getFileName() + " : Unknow " + args[0] + " filter !";
+                            System.out.println(s);
+                            Commands.logger.write(s);
+                            continue;
                     }
                 } catch (Exception e) {
                     String s = "An exception of type " + e.getClass() + " was throw !";
                     System.out.println(s);
-                    App.logger.write(s);
+                    Commands.logger.write(s);
                 }
                 input = outputDir;
-
             }
             String s = f.getName() + " process finished !";
             System.out.println(s);
-            App.logger.write(s);
+            Commands.logger.write(s);
         }
     }
 
@@ -61,13 +73,13 @@ public class Tools {
 
         String s = "Files selected :";
         System.out.println(s);
-        App.logger.write(s);
+        Commands.logger.write(s);
         for (File f : Objects.requireNonNull(new File(directory).listFiles())) {
             String[] t = f.getName().split("\\.");
             if (t.length > 1) {
                 if (extensions.indexOf(t[1]) != -1) {
                     System.out.println(f.getName());
-                    App.logger.write(f.getName());
+                    Commands.logger.write(f.getName());
                     files.add(f);
                 }
             }

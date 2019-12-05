@@ -25,7 +25,7 @@ public class Filter {
 
         String s = imagePath.getFileName() + " has been blured !";
         System.out.println(s);
-        App.logger.write(s);
+        Commands.logger.write(s);
     }
 
     public static void dilate(ImagePath imagePath, int size) throws FilterException {
@@ -42,7 +42,7 @@ public class Filter {
 
         String s = imagePath.getFileName() + " has been dilated !";
         System.out.println(s);
-        App.logger.write(s);
+        Commands.logger.write(s);
     }
 
     public static void grayscale(ImagePath imagePath) throws FilterException {
@@ -54,6 +54,6 @@ public class Filter {
 
         String s = imagePath.getFileName() + " has been turn in black & white !";
         System.out.println(s);
-        App.logger.write(s);
+        Commands.logger.write(s);
     }
 }
