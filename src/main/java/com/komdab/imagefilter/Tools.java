@@ -31,32 +31,36 @@ public class Tools {
                         return;
                     }
                 }
-
+                String s;
                 try {
-                    switch (args[0]) {
+                    switch (args[0].toLowerCase()) {
                         case "blur":
                             Filter.blur(imagePath, n);
+                            s = imagePath.getFileName() + " has been blured !";
                             break;
                         case "dilate":
                             Filter.dilate(imagePath, n);
+                            s = imagePath.getFileName() + " has been dilated !";
                             break;
                         case "grayscale":
                             Filter.grayscale(imagePath);
+                            s = imagePath.getFileName() + " has been turn in black & white !";
                             break;
                         case "zeteam":
                             Filter.zeTeam(imagePath);
+                            s = imagePath.getFileName() + " your team is forever engraved in our memories !";
                             break;
                         default:
-                            String s = imagePath.getFileName() + " : Unknow " + args[0] + " filter !";
+                            s = imagePath.getFileName() + " : Unknow " + args[0].toLowerCase() + " filter !";
                             System.out.println(s);
                             Commands.logger.write(s);
                             continue;
                     }
                 } catch (Exception e) {
-                    String s = "An exception of type " + e.getClass() + " was throw !";
-                    System.out.println(s);
-                    Commands.logger.write(s);
+                    s = "An exception of type " + e.getClass() + " was throw !";
                 }
+                System.out.println(s);
+                Commands.logger.write(s);
                 input = outputDir;
             }
             String s = f.getName() + " process finished !";
