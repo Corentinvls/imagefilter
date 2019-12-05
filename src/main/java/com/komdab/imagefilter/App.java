@@ -1,6 +1,5 @@
 package com.komdab.imagefilter;
 
-import org.apache.commons.cli.*;
 
 public class App {
     public static Logger logger;
