@@ -6,6 +6,12 @@ import java.util.List;
 import java.util.Objects;
 
 public class Tools {
+    public static void announce(boolean starting)
+    {
+        String s = starting ? "App imageFilter has started..." : "App imageFilter has finished...";
+        System.out.println(s);
+        Commands.logger.write(s);
+    }
 
     public static void process(String inputDir, String outputDir, String[] filters) {
 
@@ -21,34 +27,45 @@ public class Tools {
                     } catch (Exception e) {
                         String s = "Invalid parameter. Can't convert " + args[1] + " to an integer number !";
                         System.out.println(s);
-                        App.logger.write(s);
+                        Commands.logger.write(s);
                         return;
                     }
                 }
-
+                String s;
                 try {
-                    switch (args[0]) {
+                    switch (args[0].toLowerCase()) {
                         case "blur":
                             Filter.blur(imagePath, n);
+                            s = imagePath.getFileName() + " has been blured !";
                             break;
                         case "dilate":
                             Filter.dilate(imagePath, n);
+                            s = imagePath.getFileName() + " has been dilated !";
                             break;
                         case "grayscale":
                             Filter.grayscale(imagePath);
+                            s = imagePath.getFileName() + " has been turn in black & white !";
                             break;
+                        case "zeteam":
+                            Filter.zeTeam(imagePath);
+                            s = imagePath.getFileName() + " your team is forever engraved in our memories !";
+                            break;
+                        default:
+                            s = imagePath.getFileName() + " : Unknow " + args[0].toLowerCase() + " filter !";
+                            System.out.println(s);
+                            Commands.logger.write(s);
+                            continue;
                     }
                 } catch (Exception e) {
-                    String s = "An exception of type " + e.getClass() + " was throw !";
-                    System.out.println(s);
-                    App.logger.write(s);
+                    s = "An exception of type " + e.getClass() + " was throw !";
                 }
+                System.out.println(s);
+                Commands.logger.write(s);
                 input = outputDir;
-
             }
             String s = f.getName() + " process finished !";
             System.out.println(s);
-            App.logger.write(s);
+            Commands.logger.write(s);
         }
     }
 
@@ -61,13 +78,13 @@ public class Tools {
 
         String s = "Files selected :";
         System.out.println(s);
-        App.logger.write(s);
+        Commands.logger.write(s);
         for (File f : Objects.requireNonNull(new File(directory).listFiles())) {
             String[] t = f.getName().split("\\.");
             if (t.length > 1) {
                 if (extensions.indexOf(t[1]) != -1) {
                     System.out.println(f.getName());
-                    App.logger.write(f.getName());
+                    Commands.logger.write(f.getName());
                     files.add(f);
                 }
             }

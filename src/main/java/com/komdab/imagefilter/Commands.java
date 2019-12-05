@@ -2,22 +2,32 @@ package com.komdab.imagefilter;
 
 import org.apache.commons.cli.*;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Arrays;
+import java.lang.reflect.Method;
+
 
 public class Commands {
-
+    public static Logger logger;
     private static Options options;
 
     private static void createOptions() {
         options = new Options();
-        Option filter = Option.builder().longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
-        Option help = Option.builder().longOpt("h").desc("Return this message").build();
-        Option input = Option.builder().longOpt("i").argName("directory").desc("Select input directory from pictures").hasArg().build();
-        Option output = Option.builder().longOpt("o").argName("directory").desc("Select output directory from pictures").hasArg().build();
+        Option filter = Option.builder("f").longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
+        Option help = Option.builder("h").longOpt("help").desc("Return this message").build();
+        Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
+        Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
+        Option list = Option.builder("lf").longOpt("list-filters").desc("show all filters available").build();
+        Option config = Option.builder("cf").longOpt("config-file").argName("file").desc("Select an init file").hasArg().build();
+        Option log = Option.builder("lg").longOpt("log-file").argName("file").desc("Select or create log file").hasArg().build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
         options.addOption(output);
+        options.addOption(list);
+        options.addOption(config);
+        options.addOption(log);
     }
 
     public static CommandLine commandCreate(String[] args) throws ParseException {
@@ -27,16 +37,37 @@ public class Commands {
     }
 
     public static void verifyCli(String[] args) {
-        App.logger.write(Arrays.toString(args));
         CommandLine line;
         try {
+            Conf conf = new Conf("config.ini");
             line = Commands.commandCreate(args);
 
-            String[] filters = null;
-            String input = "";
-            String output = "";
+            if(line.hasOption("lg")) {
+                logger = new Logger(line.getOptionValue("lg"));
+            }
+            else {
+                logger = new Logger(conf.fileLog);
+            }
+            if (conf.created) {
+                logger.write("File config.ini created.");
+            }
+            Tools.announce(true);
+            logger.write("Command line : " + Arrays.toString(args));
+
+            if (line.hasOption("cf")) {
+                conf = new Conf(line.getOptionValue("cf"));
+            }
+
+            String input = conf.input;
+            String output = conf.output;
+            String[] filters = conf.filters;
+
             if (line.hasOption("h")) {
                 Commands.help();
+                return;
+            }
+            if (line.hasOption("lf")) {
+                Commands.list();
                 return;
             }
             if (line.hasOption("filters")) {
@@ -47,32 +78,70 @@ public class Commands {
                 if (input.isEmpty()) {
                     String s = "No input directory enter !";
                     System.out.println(s);
-                    App.logger.write(s);
+                    logger.write(s);
                     return;
                 }
+            }
+            if (!new File(input).exists()) {
+                String s = "Directory " + input + " not found !";
+                System.out.println(s);
+                logger.write(s);
+                return;
             }
             if (line.hasOption("o")) {
                 output = line.getOptionValue("o");
                 if (output.isEmpty()) {
                     String s = "No output directory enter !";
                     System.out.println(s);
-                    App.logger.write(s);
+                    logger.write(s);
                     return;
                 }
             }
+            if (new File(output).mkdir()) {
+                String s = "New output directory " + output + " created !";
+                System.out.println(s);
+                logger.write(s);
+            }
+
             String s = "Process started...";
             System.out.println(s);
-            App.logger.write(s);
+            logger.write(s);
+            s = "input directory : " + input;
+            System.out.println(s);
+            logger.write(s);
+            s = "output directory : " + output;
+            System.out.println(s);
+            logger.write(s);
             Tools.process(input, output, filters);
             s = "Process finished !";
             System.out.println(s);
-            App.logger.write(s);
+            logger.write(s);
+        } catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
+            logger.write(e.getMessage());
         } catch (ParseException e) {
             String s = "Command error !";
             System.out.println(s);
-            App.logger.write(s);
+            logger.write(s);
+            System.out.println("Command error, wrong entry");
         }
     }
+
+    private static void list() {
+        Filter obj = new Filter();
+
+        Class cls = obj.getClass();
+        System.out.println("Here are the filters at your disposal");
+        System.out.println("-----------------");
+
+        Method[] methods = cls.getDeclaredMethods();
+        for (Method method:methods)
+            System.out.println(method.getName());
+
+        System.out.println("-----------------");
+    }
+
+
 
     public static void help() {
         HelpFormatter formatter = new HelpFormatter();

@@ -1,26 +1,47 @@
-2019-12-05 10:11:44.624	: App imageFilter has started...
-2019-12-05 10:11:44.643	: [--filters, blu|grayscale|dilate, -i, imgs, -o, output_imgs]
-2019-12-05 10:11:44.654	: Process started...
-2019-12-05 10:11:44.655	: Files selected :
-2019-12-05 10:11:44.655	: image1.png
-2019-12-05 10:11:44.655	: image2.png
-2019-12-05 10:11:44.655	: image3.jpeg
-2019-12-05 10:11:47.91	: An exception of type class java.lang.RuntimeException was throw !
-2019-12-05 10:11:48.289	: An exception of type class java.lang.RuntimeException was throw !
-2019-12-05 10:11:48.29	: image1.png process finished !
-2019-12-05 10:11:48.291	: An exception of type class java.lang.RuntimeException was throw !
-2019-12-05 10:11:48.292	: An exception of type class java.lang.RuntimeException was throw !
-2019-12-05 10:11:48.292	: image2.png process finished !
-2019-12-05 10:11:48.292	: An exception of type class java.lang.RuntimeException was throw !
-2019-12-05 10:11:48.293	: An exception of type class java.lang.RuntimeException was throw !
-2019-12-05 10:11:48.293	: image3.jpeg process finished !
-2019-12-05 10:11:48.293	: Process finished !
-2019-12-05 10:11:48.293	: App imageFilter has finished...
-2019-12-05 10:12:16.628	: App imageFilter has started...
-2019-12-05 10:12:16.647	: [--filtes, blur|grayscale|dilate, -i, imgs, -o, output_imgs]
-2019-12-05 10:12:16.655	: Command error !
-2019-12-05 10:12:16.655	: App imageFilter has finished...
-2019-12-05 10:12:40.679	: App imageFilter has started...
-2019-12-05 10:12:40.697	: [-p]
-2019-12-05 10:12:40.705	: Command error !
-2019-12-05 10:12:40.706	: App imageFilter has finished...
+2019-12-05 15:36:03.028	: File image.log created. path : /Users/antony/Documents/Java/imagefilter/image.log
+2019-12-05 15:36:03.035	: File config.ini created.
+2019-12-05 15:36:03.037	: App imageFilter has started...
+2019-12-05 15:36:03.037	: Command line : []
+2019-12-05 15:36:03.038	: New output directory output_imgs created !
+2019-12-05 15:36:03.039	: Process started...
+2019-12-05 15:36:03.039	: input directory : imgs
+2019-12-05 15:36:03.039	: output directory : output_imgs
+2019-12-05 15:36:03.039	: Files selected :
+2019-12-05 15:36:03.039	: image1.png
+2019-12-05 15:36:03.04	: image2.png
+2019-12-05 15:36:03.04	: image3.jpeg
+2019-12-05 15:36:06.451	: image1.png has been blured !
+2019-12-05 15:36:06.457	: image1.png has been turn in black & white !
+2019-12-05 15:36:06.457	: image1.png process finished !
+2019-12-05 15:36:06.46	: image2.png has been blured !
+2019-12-05 15:36:06.462	: image2.png has been turn in black & white !
+2019-12-05 15:36:06.462	: image2.png process finished !
+2019-12-05 15:36:06.464	: image3.jpeg has been blured !
+2019-12-05 15:36:06.466	: image3.jpeg has been turn in black & white !
+2019-12-05 15:36:06.466	: image3.jpeg process finished !
+2019-12-05 15:36:06.466	: Process finished !
+2019-12-05 15:36:06.466	: App imageFilter has finished...
+2019-12-05 15:36:34.006	: App imageFilter has started...
+2019-12-05 15:36:34.012	: Command line : [-cf, test.ini]
+2019-12-05 15:36:34.014	: Process started...
+2019-12-05 15:36:34.014	: input directory : imgs
+2019-12-05 15:36:34.014	: output directory : output_imgs
+2019-12-05 15:36:34.014	: Files selected :
+2019-12-05 15:36:34.015	: image1.png
+2019-12-05 15:36:34.015	: image2.png
+2019-12-05 15:36:34.015	: image3.jpeg
+2019-12-05 15:36:37.628	: image1.png has been dilated !
+2019-12-05 15:36:37.634	: image1.png has been turn in black & white !
+2019-12-05 15:36:37.634	: image1.png process finished !
+2019-12-05 15:36:37.637	: image2.png has been dilated !
+2019-12-05 15:36:37.639	: image2.png has been turn in black & white !
+2019-12-05 15:36:37.639	: image2.png process finished !
+2019-12-05 15:36:37.641	: image3.jpeg has been dilated !
+2019-12-05 15:36:37.643	: image3.jpeg has been turn in black & white !
+2019-12-05 15:36:37.643	: image3.jpeg process finished !
+2019-12-05 15:36:37.643	: Process finished !
+2019-12-05 15:36:37.643	: App imageFilter has finished...
+2019-12-05 15:36:55.603	: App imageFilter has started...
+2019-12-05 15:36:55.61	: Command line : [-cf, tesRtt.ini]
+2019-12-05 15:36:55.612	: File tesRtt.ini not found !
+2019-12-05 15:36:55.612	: App imageFilter has finished...
