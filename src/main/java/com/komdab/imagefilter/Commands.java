@@ -37,7 +37,7 @@ public class Commands {
         try {
             Ini ini = new Ini(new File("config.ini"));
             logger = new Logger(ini.get("config", "logFile"));
-            Tools.annonce(true);
+            Tools.announce(true);
             logger.write(Arrays.toString(args));
             line = Commands.commandCreate(args);
             String[] filters = ini.get("config", "filters").split("\\|");

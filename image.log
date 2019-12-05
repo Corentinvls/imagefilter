@@ -155,3 +155,207 @@ output directory : output_imgs
 2019-12-05 14:12:41.099	: App imageFilter has started...
 2019-12-05 14:12:41.106	: [-lf]
 2019-12-05 14:12:41.122	: App imageFilter has finished...
+2019-12-05 14:35:34.852	: App imageFilter has started...
+2019-12-05 14:35:34.866	: [-f, zeTeam]
+2019-12-05 14:35:34.876	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:35:34.877	: Files selected :
+2019-12-05 14:35:34.878	: image1.png
+2019-12-05 14:35:34.878	: image2.png
+2019-12-05 14:35:34.878	: image3.jpeg
+2019-12-05 14:35:40.39	: image1.png has been turn in black & white !
+2019-12-05 14:35:40.39	: image1.png process finished !
+2019-12-05 14:35:40.393	: image2.png has been turn in black & white !
+2019-12-05 14:35:40.393	: image2.png process finished !
+2019-12-05 14:35:40.399	: image3.jpeg has been turn in black & white !
+2019-12-05 14:35:40.399	: image3.jpeg process finished !
+2019-12-05 14:35:40.4	: Process finished !
+2019-12-05 14:35:40.4	: App imageFilter has finished...
+2019-12-05 14:36:10.864	: App imageFilter has started...
+2019-12-05 14:36:10.904	: [-f, zeTeam]
+2019-12-05 14:36:10.916	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:36:10.917	: Files selected :
+2019-12-05 14:36:10.917	: image1.png
+2019-12-05 14:36:10.917	: image2.png
+2019-12-05 14:36:10.917	: image3.jpeg
+2019-12-05 14:36:16.414	: image1.png has been turn in black & white !
+2019-12-05 14:36:16.415	: image1.png process finished !
+2019-12-05 14:36:16.419	: image2.png has been turn in black & white !
+2019-12-05 14:36:16.42	: image2.png process finished !
+2019-12-05 14:36:16.427	: image3.jpeg has been turn in black & white !
+2019-12-05 14:36:16.428	: image3.jpeg process finished !
+2019-12-05 14:36:16.428	: Process finished !
+2019-12-05 14:36:16.428	: App imageFilter has finished...
+2019-12-05 14:36:49.356	: App imageFilter has started...
+2019-12-05 14:36:49.364	: [-f, zeTeam]
+2019-12-05 14:36:49.376	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:36:49.379	: Files selected :
+2019-12-05 14:36:49.379	: image1.png
+2019-12-05 14:36:49.38	: image2.png
+2019-12-05 14:36:49.38	: image3.jpeg
+2019-12-05 14:36:55.203	: image1.png has been turn in black & white !
+2019-12-05 14:36:55.204	: image1.png process finished !
+2019-12-05 14:36:55.208	: image2.png has been turn in black & white !
+2019-12-05 14:36:55.208	: image2.png process finished !
+2019-12-05 14:36:55.218	: image3.jpeg has been turn in black & white !
+2019-12-05 14:36:55.218	: image3.jpeg process finished !
+2019-12-05 14:36:55.219	: Process finished !
+2019-12-05 14:36:55.219	: App imageFilter has finished...
+2019-12-05 14:38:20.292	: App imageFilter has started...
+2019-12-05 14:38:20.304	: [-f, zeTeam]
+2019-12-05 14:38:20.316	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:38:20.317	: Files selected :
+2019-12-05 14:38:20.319	: image1.png
+2019-12-05 14:38:20.319	: image2.png
+2019-12-05 14:38:20.32	: image3.jpeg
+2019-12-05 14:38:26.081	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:38:26.081	: image1.png process finished !
+2019-12-05 14:38:26.085	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:38:26.085	: image2.png process finished !
+2019-12-05 14:38:26.09	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:38:26.09	: image3.jpeg process finished !
+2019-12-05 14:38:26.091	: Process finished !
+2019-12-05 14:38:26.091	: App imageFilter has finished...
+2019-12-05 14:40:00.729	: App imageFilter has started...
+2019-12-05 14:40:00.737	: [-f, zeTeam]
+2019-12-05 14:40:00.747	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:40:00.747	: Files selected :
+2019-12-05 14:40:00.748	: image1.png
+2019-12-05 14:40:00.748	: image2.png
+2019-12-05 14:40:00.749	: image3.jpeg
+2019-12-05 14:40:06.551	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:40:06.551	: image1.png process finished !
+2019-12-05 14:40:06.554	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:40:06.554	: image2.png process finished !
+2019-12-05 14:40:06.559	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:40:06.559	: image3.jpeg process finished !
+2019-12-05 14:40:06.559	: Process finished !
+2019-12-05 14:40:06.559	: App imageFilter has finished...
+2019-12-05 14:40:31.119	: App imageFilter has started...
+2019-12-05 14:40:31.128	: [-f, zeTeam]
+2019-12-05 14:40:31.137	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:40:31.137	: Files selected :
+2019-12-05 14:40:31.138	: image1.png
+2019-12-05 14:40:31.138	: image2.png
+2019-12-05 14:40:31.138	: image3.jpeg
+2019-12-05 14:40:36.784	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:40:36.785	: image1.png process finished !
+2019-12-05 14:40:36.789	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:40:36.789	: image2.png process finished !
+2019-12-05 14:40:36.794	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:40:36.794	: image3.jpeg process finished !
+2019-12-05 14:40:36.794	: Process finished !
+2019-12-05 14:40:36.794	: App imageFilter has finished...
+2019-12-05 14:41:06.319	: App imageFilter has started...
+2019-12-05 14:41:06.326	: [-f, zeTeam]
+2019-12-05 14:41:06.335	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:41:06.336	: Files selected :
+2019-12-05 14:41:06.338	: image1.png
+2019-12-05 14:41:06.338	: image2.png
+2019-12-05 14:41:06.338	: image3.jpeg
+2019-12-05 14:41:12.581	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:41:12.582	: image1.png process finished !
+2019-12-05 14:41:12.584	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:41:12.584	: image2.png process finished !
+2019-12-05 14:41:12.588	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:41:12.588	: image3.jpeg process finished !
+2019-12-05 14:41:12.589	: Process finished !
+2019-12-05 14:41:12.589	: App imageFilter has finished...
+2019-12-05 14:41:33.62	: App imageFilter has started...
+2019-12-05 14:41:33.629	: [-f, zeTeam]
+2019-12-05 14:41:33.638	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:41:33.64	: Files selected :
+2019-12-05 14:41:33.641	: image1.png
+2019-12-05 14:41:33.641	: image2.png
+2019-12-05 14:41:33.642	: image3.jpeg
+2019-12-05 14:41:39.441	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:41:39.441	: image1.png process finished !
+2019-12-05 14:41:39.444	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:41:39.444	: image2.png process finished !
+2019-12-05 14:41:39.45	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:41:39.45	: image3.jpeg process finished !
+2019-12-05 14:41:39.451	: Process finished !
+2019-12-05 14:41:39.451	: App imageFilter has finished...
+2019-12-05 14:41:51.97	: App imageFilter has started...
+2019-12-05 14:41:51.982	: [-f, zeTeam]
+2019-12-05 14:41:51.994	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:41:51.994	: Files selected :
+2019-12-05 14:41:51.995	: image1.png
+2019-12-05 14:41:51.995	: image2.png
+2019-12-05 14:41:51.995	: image3.jpeg
+2019-12-05 14:41:57.624	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:41:57.625	: image1.png process finished !
+2019-12-05 14:41:57.629	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:41:57.631	: image2.png process finished !
+2019-12-05 14:41:57.64	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:41:57.64	: image3.jpeg process finished !
+2019-12-05 14:41:57.642	: Process finished !
+2019-12-05 14:41:57.643	: App imageFilter has finished...
+2019-12-05 14:42:21.547	: App imageFilter has started...
+2019-12-05 14:42:21.556	: [-f, zeTeam]
+2019-12-05 14:42:21.572	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:42:21.572	: Files selected :
+2019-12-05 14:42:21.573	: image1.png
+2019-12-05 14:42:21.573	: image2.png
+2019-12-05 14:42:21.574	: image3.jpeg
+2019-12-05 14:42:27.087	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:42:27.087	: image1.png process finished !
+2019-12-05 14:42:27.09	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:42:27.091	: image2.png process finished !
+2019-12-05 14:42:27.095	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:42:27.095	: image3.jpeg process finished !
+2019-12-05 14:42:27.095	: Process finished !
+2019-12-05 14:42:27.095	: App imageFilter has finished...
+2019-12-05 14:43:11.253	: App imageFilter has started...
+2019-12-05 14:43:11.259	: [-f, zeTeam]
+2019-12-05 14:43:11.266	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:43:11.266	: Files selected :
+2019-12-05 14:43:11.266	: image1.png
+2019-12-05 14:43:11.267	: image2.png
+2019-12-05 14:43:11.268	: image3.jpeg
+2019-12-05 14:43:16.966	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:43:16.969	: image1.png process finished !
+2019-12-05 14:43:16.979	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:43:16.98	: image2.png process finished !
+2019-12-05 14:43:16.986	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:43:16.987	: image3.jpeg process finished !
+2019-12-05 14:43:16.987	: Process finished !
+2019-12-05 14:43:16.987	: App imageFilter has finished...
+2019-12-05 14:43:28.92	: App imageFilter has started...
+2019-12-05 14:43:28.927	: [-f, zeTeam]
+2019-12-05 14:43:28.933	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:43:28.933	: Files selected :
+2019-12-05 14:43:28.934	: image1.png
+2019-12-05 14:43:28.935	: image2.png
+2019-12-05 14:43:28.935	: image3.jpeg
+2019-12-05 14:43:34.729	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:43:34.73	: image1.png process finished !
+2019-12-05 14:43:34.732	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:43:34.732	: image2.png process finished !
+2019-12-05 14:43:34.736	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:43:34.736	: image3.jpeg process finished !
+2019-12-05 14:43:34.737	: Process finished !
+2019-12-05 14:43:34.737	: App imageFilter has finished...
