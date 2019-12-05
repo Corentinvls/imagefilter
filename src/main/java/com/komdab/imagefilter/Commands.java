@@ -9,10 +9,10 @@ public class Commands {
     private static void createOptions()
     {
         options = new Options();
-        Option filter = Option.builder().longOpt("filters").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
+        Option filter = Option.builder().longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
         Option help = Option.builder().longOpt("h").desc("Return this message").build();
-        Option input = Option.builder().longOpt("i").desc("Select input directory from pictures").hasArg().build();
-        Option output = Option.builder().longOpt("o").desc("Select output directory from pictures").hasArg().build();
+        Option input = Option.builder().longOpt("i").argName("directory").desc("Select input directory from pictures").hasArg().build();
+        Option output = Option.builder().longOpt("o").argName("directory").desc("Select output directory from pictures").hasArg().build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
@@ -26,6 +26,7 @@ public class Commands {
     }
 
     public static void help(){
-
+        HelpFormatter formatter = new HelpFormatter();
+        formatter.printHelp( "help", options , true);
     }
 }
