@@ -1,0 +1,21 @@
+2019-12-05 15:25:44.987	: File test.log created. path : /Users/antony/Documents/Java/imagefilter/test.log
+2019-12-05 15:25:44.992	: App imageFilter has started...
+2019-12-05 15:25:44.994	: Command line : [-lg, test.log]
+2019-12-05 15:25:44.994	: Process started...
+2019-12-05 15:25:44.995	: input directory : imgs
+2019-12-05 15:25:44.995	: output directory : output_imgs
+2019-12-05 15:25:44.995	: Files selected :
+2019-12-05 15:25:44.996	: image1.png
+2019-12-05 15:25:44.996	: image2.png
+2019-12-05 15:25:44.997	: image3.jpeg
+2019-12-05 15:25:48.304	: image1.png has been blured !
+2019-12-05 15:25:48.31	: image1.png has been turn in black & white !
+2019-12-05 15:25:48.311	: image1.png process finished !
+2019-12-05 15:25:48.313	: image2.png has been blured !
+2019-12-05 15:25:48.315	: image2.png has been turn in black & white !
+2019-12-05 15:25:48.316	: image2.png process finished !
+2019-12-05 15:25:48.318	: image3.jpeg has been blured !
+2019-12-05 15:25:48.32	: image3.jpeg has been turn in black & white !
+2019-12-05 15:25:48.32	: image3.jpeg process finished !
+2019-12-05 15:25:48.32	: Process finished !
+2019-12-05 15:25:48.32	: App imageFilter has finished...

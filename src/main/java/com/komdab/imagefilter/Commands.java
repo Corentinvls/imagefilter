@@ -19,13 +19,15 @@ public class Commands {
         Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
         Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
         Option list = Option.builder("lf").longOpt("list-filters").desc("show all filters available").build();
-        Option config = Option.builder("cf").longOpt("config-file").argName("file").desc("Select config.ini or log").hasArg().build();
+        Option config = Option.builder("cf").longOpt("config-file").argName("file").desc("Select an init file").hasArg().build();
+        Option log = Option.builder("lg").longOpt("log-file").argName("file").desc("Select or create log file").hasArg().build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
         options.addOption(output);
         options.addOption(list);
         options.addOption(config);
+        options.addOption(log);
     }
 
     public static CommandLine commandCreate(String[] args) throws ParseException {
@@ -38,18 +40,24 @@ public class Commands {
         CommandLine line;
         try {
             Conf conf = new Conf("config.ini");
+            line = Commands.commandCreate(args);
 
-            logger = new Logger(conf.fileLog);
+            if(line.hasOption("lg")) {
+                logger = new Logger(line.getOptionValue("lg"));
+            }
+            else {
+                logger = new Logger(conf.fileLog);
+            }
             if (conf.created) {
                 logger.write("File config.ini created.");
             }
             Tools.announce(true);
             logger.write("Command line : " + Arrays.toString(args));
 
-            line = Commands.commandCreate(args);
             if (line.hasOption("cf")) {
                 conf = new Conf(line.getOptionValue("cf"));
             }
+
             String input = conf.input;
             String output = conf.output;
             String[] filters = conf.filters;
