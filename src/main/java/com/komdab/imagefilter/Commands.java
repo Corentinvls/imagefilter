@@ -4,14 +4,22 @@ import org.apache.commons.cli.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.lang.reflect.Method;
+import java.util.List;
+import java.util.Objects;
 
-
+/**
+ * Class Commands to read / verify option in the CLI
+ */
 public class Commands {
     public static Logger logger;
     private static Options options;
 
+    /**
+     * Function to create option
+     */
     private static void createOptions() {
         options = new Options();
         Option filter = Option.builder("f").longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
@@ -30,12 +38,22 @@ public class Commands {
         options.addOption(log);
     }
 
+    /**
+     * Function to create Option config
+     * @param args  Command line options
+     * @return CLI's parser
+     * @throws ParseException  return exception if the CLI can't parse
+     */
     public static CommandLine commandCreate(String[] args) throws ParseException {
         createOptions();
         CommandLineParser parser = new DefaultParser();
         return parser.parse(options, args);
     }
 
+    /**
+     * Function analyse CLI, configure and run the process
+     * @param args  Command line options
+     */
     public static void verifyCli(String[] args) {
         CommandLine line;
         try {
@@ -51,7 +69,7 @@ public class Commands {
             if (conf.created) {
                 logger.write("File config.ini created.");
             }
-            Tools.announce(true);
+            announce(true);
             logger.write("Command line : " + Arrays.toString(args));
 
             if (line.hasOption("cf")) {
@@ -63,11 +81,11 @@ public class Commands {
             String[] filters = conf.filters;
 
             if (line.hasOption("h")) {
-                Commands.help();
+                Commands.displayHelp();
                 return;
             }
             if (line.hasOption("lf")) {
-                Commands.list();
+                Commands.displayFilter();
                 return;
             }
             if (line.hasOption("filters")) {
@@ -112,7 +130,7 @@ public class Commands {
             s = "output directory : " + output;
             System.out.println(s);
             logger.write(s);
-            Tools.process(input, output, filters);
+            process(input, output, filters);
             s = "Process finished !";
             System.out.println(s);
             logger.write(s);
@@ -127,7 +145,10 @@ public class Commands {
         }
     }
 
-    private static void list() {
+    /**
+     * Function to display filter
+     */
+    private static void displayFilter() {
         Filter obj = new Filter();
 
         Class cls = obj.getClass();
@@ -142,9 +163,107 @@ public class Commands {
     }
 
 
-
-    public static void help() {
+    /**
+     * Function to display options CLI
+     */
+    private static void displayHelp() {
         HelpFormatter formatter = new HelpFormatter();
         formatter.printHelp("help", options, true);
+    }
+
+    /**
+     * Function to print start and finish message
+     */
+    public static void announce(boolean starting)
+    {
+        String s = starting ? "App imageFilter has started..." : "App imageFilter has finished...";
+        System.out.println(s);
+        Commands.logger.write(s);
+    }
+
+    /**
+     * Function to run process filter
+     */
+    private static void process(String inputDir, String outputDir, String[] filters) {
+
+        for (File f : getFilesFromDirectory(inputDir)) {
+            String input = inputDir;
+            for (String filter : filters) {
+                ImagePath imagePath = new ImagePath(input, outputDir, f.getName());
+                String[] args = filter.split(":");
+                int n = 1;
+                if (args.length > 1) {
+                    try {
+                        n = Integer.parseInt(args[1]);
+                    } catch (Exception e) {
+                        String s = "Invalid parameter. Can't convert " + args[1] + " to an integer number !";
+                        System.out.println(s);
+                        Commands.logger.write(s);
+                        return;
+                    }
+                }
+                String s;
+                try {
+                    switch (args[0].toLowerCase()) {
+                        case "blur":
+                            Filter.blur(imagePath, n);
+                            s = imagePath.getFileName() + " has been blured !";
+                            break;
+                        case "dilate":
+                            Filter.dilate(imagePath, n);
+                            s = imagePath.getFileName() + " has been dilated !";
+                            break;
+                        case "grayscale":
+                            Filter.grayscale(imagePath);
+                            s = imagePath.getFileName() + " has been turn in black & white !";
+                            break;
+                        case "zeteam":
+                            Filter.zeTeam(imagePath);
+                            s = imagePath.getFileName() + " your team is forever engraved in our memories !";
+                            break;
+                        default:
+                            s = imagePath.getFileName() + " : Unknow " + args[0].toLowerCase() + " filter !";
+                            System.out.println(s);
+                            Commands.logger.write(s);
+                            continue;
+                    }
+                } catch (Exception e) {
+                    s = "An exception of type " + e.getClass() + " was throw !";
+                }
+                System.out.println(s);
+                Commands.logger.write(s);
+                input = outputDir;
+            }
+            String s = f.getName() + " process finished !";
+            System.out.println(s);
+            Commands.logger.write(s);
+        }
+    }
+
+    /**
+     *Function to select images
+     * @return Files list
+     */
+    private static List<File> getFilesFromDirectory(String directory) {
+        List<String> extensions = new ArrayList<String>();
+        List<File> files = new ArrayList<File>();
+        extensions.add("png");
+        extensions.add("jpg");
+        extensions.add("jpeg");
+
+        String s = "Files selected :";
+        System.out.println(s);
+        Commands.logger.write(s);
+        for (File f : Objects.requireNonNull(new File(directory).listFiles())) {
+            String[] t = f.getName().split("\\.");
+            if (t.length > 1) {
+                if (extensions.indexOf(t[1]) != -1) {
+                    System.out.println(f.getName());
+                    Commands.logger.write(f.getName());
+                    files.add(f);
+                }
+            }
+        }
+        return files;
     }
 }

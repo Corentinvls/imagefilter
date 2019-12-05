@@ -7,6 +7,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Class Conf to create a config
+ */
 public class Conf {
     public String input;
     public String output;
@@ -14,6 +17,11 @@ public class Conf {
     public String[] filters;
     public boolean created;
 
+    /**
+     * Constructor
+     * @param nameFile  name config file
+     * @throws FileNotFoundException  return exception if file not exists
+     */
     public Conf(String nameFile) throws FileNotFoundException {
         File config = new File(nameFile);
         if(!nameFile.equals("config.ini")) {
@@ -38,6 +46,9 @@ public class Conf {
         this.fileLog = ini.get("config","logFile");
     }
 
+    /**
+     * Method to create default configuration
+     */
     private void createConfigDefault() {
         try {
             FileWriter myWriter = new FileWriter("config.ini");

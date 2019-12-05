@@ -5,11 +5,18 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Timestamp;
 
+
+/**
+ * Class log operation
+ */
 public class Logger
 {
     private File file;
     private String nameFile;
 
+    /**
+     *Constructor to create new log file
+     */
     public  Logger(String nameFile)
     {
         this.nameFile = nameFile;

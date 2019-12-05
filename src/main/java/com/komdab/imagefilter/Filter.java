@@ -9,8 +9,17 @@ import org.bytedeco.opencv.opencv_core.Scalar;
 import org.bytedeco.opencv.opencv_core.Size;
 import org.opencv.imgproc.Imgproc;
 
+/**
+ * Class to apply filter
+ */
 public class Filter {
-    public static void blur(ImagePath imagePath, int size ) throws FilterException {
+    /**
+     * Method to apply blur filter
+     * @param imagePath path Input, path Output and file name
+     * @param size filter parameter
+     * @throws FilterException return exception if number is odd, is negative and image not found
+     */
+    public static void blur(ImagePath imagePath, int size) throws FilterException {
         if (size % 2 == 0) // si n pair
             throw new FilterException("Size argument must be an odd number !");
         if (size < 1)
@@ -24,6 +33,12 @@ public class Filter {
         imwrite(imagePath.getImagePathOut(), image);
     }
 
+    /**
+     * Method to apply dilate filter
+     * @param imagePath path Input, path Output and file name
+     * @param size filter parameter
+     * @throws FilterException return exception if number is negative and image not found
+     */
     public static void dilate(ImagePath imagePath, int size) throws FilterException {
 
         if (size < 0)
@@ -37,6 +52,11 @@ public class Filter {
         imwrite(imagePath.getImagePathOut(), image);
     }
 
+    /**
+     * Method to apply grayscale filter
+     * @param imagePath path Input, path Output and file name
+     * @throws FilterException return exception if image not found
+     */
     public static void grayscale(ImagePath imagePath) throws FilterException {
         Mat image = imread(imagePath.getImagePathIn());
         if (image == null)
@@ -45,6 +65,11 @@ public class Filter {
         imwrite(imagePath.getImagePathOut(), image);
     }
 
+    /**
+     * Method to apply zeteam filter
+     * @param imagePath path Input, path Output and file name
+     * @throws FilterException return exception if image not found
+     */
     public static void zeTeam(ImagePath imagePath) throws FilterException {
         Mat image = imread(imagePath.getImagePathIn());
         if (image == null)
