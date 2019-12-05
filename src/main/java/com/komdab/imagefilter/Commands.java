@@ -2,6 +2,8 @@ package com.komdab.imagefilter;
 
 import org.apache.commons.cli.*;
 
+import java.util.Arrays;
+
 public class Commands {
 
     private static Options options;
@@ -18,7 +20,6 @@ public class Commands {
         options.addOption(output);
     }
 
-
     public static CommandLine commandCreate(String[] args) throws ParseException {
         createOptions();
         CommandLineParser parser = new DefaultParser();
@@ -26,6 +27,7 @@ public class Commands {
     }
 
     public static void verifyCli(String[] args) {
+        App.logger.write(Arrays.toString(args));
         CommandLine line;
         try {
             line = Commands.commandCreate(args);
@@ -43,20 +45,32 @@ public class Commands {
             if (line.hasOption("i")) {
                 input = line.getOptionValue("i");
                 if (input.isEmpty()) {
-                    System.out.println("No input directory enter !");
+                    String s = "No input directory enter !";
+                    System.out.println(s);
+                    App.logger.write(s);
                     return;
                 }
             }
             if (line.hasOption("o")) {
                 output = line.getOptionValue("o");
                 if (output.isEmpty()) {
-                    System.out.println("No output directory enter !");
+                    String s = "No output directory enter !";
+                    System.out.println(s);
+                    App.logger.write(s);
                     return;
                 }
             }
+            String s = "Process started...";
+            System.out.println(s);
+            App.logger.write(s);
             Tools.process(input, output, filters);
+            s = "Process finished !";
+            System.out.println(s);
+            App.logger.write(s);
         } catch (ParseException e) {
-            System.out.println("Command error, wrong entry");
+            String s = "Command error !";
+            System.out.println(s);
+            App.logger.write(s);
         }
     }
 
