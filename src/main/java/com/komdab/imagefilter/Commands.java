@@ -5,6 +5,8 @@ import org.ini4j.Ini;
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
+import java.lang.reflect.Method;
+
 
 public class Commands {
     public static Logger logger;
@@ -16,10 +18,12 @@ public class Commands {
         Option help = Option.builder("h").longOpt("help").desc("Return this message").build();
         Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
         Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
+        Option list = Option.builder("lf").longOpt("list-filters").desc("show all filters available").build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
         options.addOption(output);
+        options.addOption(list);
     }
 
     public static CommandLine commandCreate(String[] args) throws ParseException {
@@ -42,6 +46,10 @@ public class Commands {
 
             if (line.hasOption("h")) {
                 Commands.help();
+                return;
+            }
+            if (line.hasOption("lf")) {
+                Commands.list();
                 return;
             }
             if (line.hasOption("filters")) {
@@ -95,6 +103,22 @@ public class Commands {
             e.printStackTrace();
         }
     }
+
+    private static void list() {
+        Filter obj = new Filter();
+
+        Class cls = obj.getClass();
+        System.out.println("Here are the filters at your disposal");
+        System.out.println("-----------------");
+
+        Method[] methods = cls.getDeclaredMethods();
+        for (Method method:methods)
+            System.out.println(method.getName());
+
+        System.out.println("-----------------");
+    }
+
+
 
     public static void help() {
         HelpFormatter formatter = new HelpFormatter();
