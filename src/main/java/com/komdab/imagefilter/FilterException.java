@@ -7,7 +7,6 @@ public class FilterException extends Exception {
 
     /**
      * Constructor
-     * @param message message exception
      */
     public FilterException(String message) {
         super(message);

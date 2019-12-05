@@ -1,7 +1,6 @@
 package com.komdab.imagefilter;
 
 import org.ini4j.Ini;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -19,14 +18,13 @@ public class Conf {
 
     /**
      * Constructor
-     * @param nameFile  name config file
      * @throws FileNotFoundException  return exception if file not exists
      */
-    public Conf(String nameFile) throws FileNotFoundException {
-        File config = new File(nameFile);
-        if(!nameFile.equals("config.ini")) {
+    public Conf(String fileName) throws FileNotFoundException {
+        File config = new File(fileName);
+        if(!fileName.equals("config.ini")) {
             if(!config.exists()) {
-                throw new FileNotFoundException("File " + nameFile + " not found !");
+                throw new FileNotFoundException("File " + fileName + " not found !");
             }
         }
         if(!config.exists())

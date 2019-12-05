@@ -1,12 +1,10 @@
 package com.komdab.imagefilter;
 
 import org.apache.commons.cli.*;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +13,7 @@ import java.util.Objects;
  */
 public class Commands {
     public static Logger logger;
-    private static Options options;
+    public static Options options;
 
     /**
      * Function to create option
@@ -69,7 +67,7 @@ public class Commands {
             if (conf.created) {
                 logger.write("File config.ini created.");
             }
-            announce(true);
+            Display.announce(true);
             logger.write("Command line : " + Arrays.toString(args));
 
             if (line.hasOption("cf")) {
@@ -81,11 +79,11 @@ public class Commands {
             String[] filters = conf.filters;
 
             if (line.hasOption("h")) {
-                Commands.displayHelp();
+                Display.displayHelp(options);
                 return;
             }
             if (line.hasOption("lf")) {
-                Commands.displayFilter();
+                Display.displayFilter();
                 return;
             }
             if (line.hasOption("filters")) {
@@ -143,42 +141,6 @@ public class Commands {
             logger.write(s);
             System.out.println("Command error, wrong entry");
         }
-    }
-
-    /**
-     * Function to display filter
-     */
-    private static void displayFilter() {
-        Filter obj = new Filter();
-
-        Class cls = obj.getClass();
-        System.out.println("Here are the filters at your disposal");
-        System.out.println("-----------------");
-
-        Method[] methods = cls.getDeclaredMethods();
-        for (Method method:methods)
-            System.out.println(method.getName());
-
-        System.out.println("-----------------");
-    }
-
-
-    /**
-     * Function to display options CLI
-     */
-    private static void displayHelp() {
-        HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("help", options, true);
-    }
-
-    /**
-     * Function to print start and finish message
-     */
-    public static void announce(boolean starting)
-    {
-        String s = starting ? "App imageFilter has started..." : "App imageFilter has finished...";
-        System.out.println(s);
-        Commands.logger.write(s);
     }
 
     /**
