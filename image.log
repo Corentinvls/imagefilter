@@ -45,3 +45,60 @@
 2019-12-05 14:49:12.562	: image3.jpeg process finished !
 2019-12-05 14:49:12.562	: Process finished !
 2019-12-05 14:49:12.562	: App imageFilter has finished...
+2019-12-05 15:01:12.116	: App imageFilter has started...
+2019-12-05 15:01:12.121	: Command line : [-cf, test.ini]
+2019-12-05 15:01:12.131	: Process started...
+2019-12-05 15:01:12.132	: input directory : imgs
+2019-12-05 15:01:12.132	: output directory : output_imgs
+2019-12-05 15:01:12.132	: Files selected :
+2019-12-05 15:01:12.133	: image1.png
+2019-12-05 15:01:12.133	: image2.png
+2019-12-05 15:01:12.133	: image3.jpeg
+2019-12-05 15:01:15.508	: image1.png has been dilated !
+2019-12-05 15:01:15.513	: image1.png has been turn in black & white !
+2019-12-05 15:01:15.513	: image1.png process finished !
+2019-12-05 15:01:15.517	: image2.png has been dilated !
+2019-12-05 15:01:15.518	: image2.png has been turn in black & white !
+2019-12-05 15:01:15.518	: image2.png process finished !
+2019-12-05 15:01:15.521	: image3.jpeg has been dilated !
+2019-12-05 15:01:15.523	: image3.jpeg has been turn in black & white !
+2019-12-05 15:01:15.523	: image3.jpeg process finished !
+2019-12-05 15:01:15.523	: Process finished !
+2019-12-05 15:01:15.524	: App imageFilter has finished...
+2019-12-05 15:01:32.304	: App imageFilter has started...
+2019-12-05 15:01:32.312	: Command line : [-lf]
+2019-12-05 15:01:32.321	: App imageFilter has finished...
+2019-12-05 15:01:51.522	: App imageFilter has started...
+2019-12-05 15:01:51.527	: Command line : [-f, zeTeam]
+2019-12-05 15:01:51.537	: Process started...
+2019-12-05 15:01:51.538	: input directory : imgs
+2019-12-05 15:01:51.538	: output directory : output_imgs
+2019-12-05 15:01:51.538	: Files selected :
+2019-12-05 15:01:51.539	: image1.png
+2019-12-05 15:01:51.539	: image2.png
+2019-12-05 15:01:51.539	: image3.jpeg
+2019-12-05 15:01:51.54	: image1.png : Unknow zeTeam filter !
+2019-12-05 15:01:51.54	: image1.png process finished !
+2019-12-05 15:01:51.541	: image2.png : Unknow zeTeam filter !
+2019-12-05 15:01:51.541	: image2.png process finished !
+2019-12-05 15:01:51.541	: image3.jpeg : Unknow zeTeam filter !
+2019-12-05 15:01:51.541	: image3.jpeg process finished !
+2019-12-05 15:01:51.541	: Process finished !
+2019-12-05 15:01:51.541	: App imageFilter has finished...
+2019-12-05 15:02:50.024	: App imageFilter has started...
+2019-12-05 15:02:50.033	: Command line : [-f, zeteam]
+2019-12-05 15:02:50.043	: Process started...
+2019-12-05 15:02:50.043	: input directory : imgs
+2019-12-05 15:02:50.043	: output directory : output_imgs
+2019-12-05 15:02:50.043	: Files selected :
+2019-12-05 15:02:50.044	: image1.png
+2019-12-05 15:02:50.044	: image2.png
+2019-12-05 15:02:50.044	: image3.jpeg
+2019-12-05 15:02:54.386	: image1.png your team is forever engraved in our memories !
+2019-12-05 15:02:54.387	: image1.png process finished !
+2019-12-05 15:02:54.391	: image2.png your team is forever engraved in our memories !
+2019-12-05 15:02:54.391	: image2.png process finished !
+2019-12-05 15:02:54.394	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 15:02:54.394	: image3.jpeg process finished !
+2019-12-05 15:02:54.394	: Process finished !
+2019-12-05 15:02:54.395	: App imageFilter has finished...

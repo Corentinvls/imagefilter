@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Tools {
-    public static void annonce(boolean starting)
+    public static void announce(boolean starting)
     {
         String s = starting ? "App imageFilter has started..." : "App imageFilter has finished...";
         System.out.println(s);
@@ -42,6 +42,9 @@ public class Tools {
                             break;
                         case "grayscale":
                             Filter.grayscale(imagePath);
+                            break;
+                        case "zeteam":
+                            Filter.zeTeam(imagePath);
                             break;
                         default:
                             String s = imagePath.getFileName() + " : Unknow " + args[0] + " filter !";

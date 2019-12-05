@@ -1,11 +1,12 @@
 package com.komdab.imagefilter;
 
 import org.apache.commons.cli.*;
-import org.ini4j.Ini;
+
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Arrays;
+import java.lang.reflect.Method;
+
 
 public class Commands {
     public static Logger logger;
@@ -17,11 +18,13 @@ public class Commands {
         Option help = Option.builder("h").longOpt("help").desc("Return this message").build();
         Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
         Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
+        Option list = Option.builder("lf").longOpt("list-filters").desc("show all filters available").build();
         Option config = Option.builder("cf").longOpt("config-file").argName("file").desc("Select config.ini or log").hasArg().build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
         options.addOption(output);
+        options.addOption(list);
         options.addOption(config);
     }
 
@@ -40,7 +43,7 @@ public class Commands {
             if (conf.created) {
                 logger.write("File config.ini created.");
             }
-            Tools.annonce(true);
+            Tools.announce(true);
             logger.write("Command line : " + Arrays.toString(args));
 
             line = Commands.commandCreate(args);
@@ -53,6 +56,10 @@ public class Commands {
 
             if (line.hasOption("h")) {
                 Commands.help();
+                return;
+            }
+            if (line.hasOption("lf")) {
+                Commands.list();
                 return;
             }
             if (line.hasOption("filters")) {
@@ -111,6 +118,22 @@ public class Commands {
             System.out.println("Command error, wrong entry");
         }
     }
+
+    private static void list() {
+        Filter obj = new Filter();
+
+        Class cls = obj.getClass();
+        System.out.println("Here are the filters at your disposal");
+        System.out.println("-----------------");
+
+        Method[] methods = cls.getDeclaredMethods();
+        for (Method method:methods)
+            System.out.println(method.getName());
+
+        System.out.println("-----------------");
+    }
+
+
 
     public static void help() {
         HelpFormatter formatter = new HelpFormatter();

@@ -4,6 +4,8 @@ import static org.bytedeco.opencv.global.opencv_imgproc.*;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
 import org.bytedeco.opencv.global.opencv_imgproc;
 import org.bytedeco.opencv.opencv_core.Mat;
+import org.bytedeco.opencv.opencv_core.Point;
+import org.bytedeco.opencv.opencv_core.Scalar;
 import org.bytedeco.opencv.opencv_core.Size;
 import org.opencv.imgproc.Imgproc;
 
@@ -51,6 +53,19 @@ public class Filter {
         imwrite(imagePath.getImagePathOut(), image);
 
         String s = imagePath.getFileName() + " has been turn in black & white !";
+        System.out.println(s);
+        Commands.logger.write(s);
+    }
+
+    public static void zeTeam(ImagePath imagePath) throws FilterException {
+        Mat image = imread(imagePath.getImagePathIn());
+        if (image == null)
+            throw new FilterException("Image not found !");
+        opencv_imgproc.putText(image, "Team KomDab",new Point(5,25), FONT_HERSHEY_SCRIPT_COMPLEX, 1.01,
+                new Scalar(0, 0, 0, 2.0));
+        imwrite(imagePath.getImagePathOut(), image);
+
+        String s = imagePath.getFileName() + " your team is forever engraved in our memories !";
         System.out.println(s);
         Commands.logger.write(s);
     }
