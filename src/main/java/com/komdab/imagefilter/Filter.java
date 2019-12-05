@@ -13,9 +13,9 @@ import org.opencv.imgproc.Imgproc;
 public class Filter {
 
     public static void blur(ImagePath imagePath, int size) throws FilterException {
-        if(size % 2 == 0) // si n pair
+        if (size % 2 == 0) // si n pair
             throw new FilterException("Size argument must be an odd number !");
-        if(size < 1)
+        if (size < 1)
             throw new FilterException("Size argument must be a positive number !");
 
         Mat image = imread(imagePath.getImagePathIn());
@@ -28,7 +28,7 @@ public class Filter {
 
     public static void dilate(ImagePath imagePath, int size) throws FilterException {
 
-        if(size < 0)
+        if (size < 0)
             throw new FilterException("Size argument must be a positive number !");
 
         Mat image = imread(imagePath.getImagePathIn());
