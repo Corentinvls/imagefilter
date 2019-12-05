@@ -11,26 +11,21 @@ public class Tools {
 
         for (File f : getFilesFromDirectory(inputDir)) {
             String input = inputDir;
-            for (String filter : filters)
-            {
+            for (String filter : filters) {
                 ImagePath imagePath = new ImagePath(input, outputDir, f.getName());
                 String[] args = filter.split(":");
                 int n = 0;
-                if(args.length > 1)
-                {
+                if (args.length > 1) {
                     try {
                         n = Integer.parseInt(args[1]);
-                    }
-                    catch (Exception e)
-                    {
+                    } catch (Exception e) {
                         System.out.println("Invalid parameter. It's not an integer number !");
                         return;
                     }
                 }
 
                 try {
-                    switch (args[0])
-                    {
+                    switch (args[0]) {
                         case "blur":
                             Filter.blur(imagePath, n);
                             break;
@@ -41,31 +36,25 @@ public class Tools {
                             Filter.grayscale(imagePath);
                             break;
                     }
-                }
-                catch (Exception e)
-                {
-                     System.out.println("An exception of type " + e.getClass() + " was throw !");
+                } catch (Exception e) {
+                    System.out.println("An exception of type " + e.getClass() + " was throw !");
                 }
                 input = outputDir;
             }
         }
     }
 
-    private static List<File> getFilesFromDirectory(String directory)
-    {
+    private static List<File> getFilesFromDirectory(String directory) {
         List<String> extensions = new ArrayList<String>();
         List<File> files = new ArrayList<File>();
         extensions.add("png");
         extensions.add("jpg");
         extensions.add("jpeg");
 
-        for (File f: Objects.requireNonNull(new File(directory).listFiles()))
-        {
+        for (File f : Objects.requireNonNull(new File(directory).listFiles())) {
             String[] t = f.getName().split("\\.");
-            if(t.length > 1)
-            {
-                if(extensions.indexOf(t[1]) != -1)
-                {
+            if (t.length > 1) {
+                if (extensions.indexOf(t[1]) != -1) {
                     System.out.println(f.getName());
                     files.add(f);
                 }
