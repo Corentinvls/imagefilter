@@ -1,46 +1,47 @@
-2019-12-05 11:52:13.639	: File image.log created. path : /Users/antony/Documents/Java/imagefilter/image.log
-2019-12-05 11:52:13.646	: App imageFilter has started...
-2019-12-05 11:52:13.648	: [--f, blu:3|dilate:3]
-2019-12-05 11:52:13.656	: New output directory output_imgs created !
-2019-12-05 11:52:13.656	: Process started...
-input directory : imgs
-output directory : output_imgs
-2019-12-05 11:52:13.656	: Files selected :
-2019-12-05 11:52:13.657	: image1.png
-2019-12-05 11:52:13.657	: image2.png
-2019-12-05 11:52:13.657	: image3.jpeg
-2019-12-05 11:52:13.658	: image1.png : Unknow blu filter !
-2019-12-05 11:52:17.01	: image1.png has been dilated !
-2019-12-05 11:52:17.01	: image1.png process finished !
-2019-12-05 11:52:17.011	: image2.png : Unknow blu filter !
-2019-12-05 11:52:17.014	: image2.png has been dilated !
-2019-12-05 11:52:17.014	: image2.png process finished !
-2019-12-05 11:52:17.014	: image3.jpeg : Unknow blu filter !
-2019-12-05 11:52:17.017	: image3.jpeg has been dilated !
-2019-12-05 11:52:17.017	: image3.jpeg process finished !
-2019-12-05 11:52:17.017	: Process finished !
-2019-12-05 11:52:17.017	: App imageFilter has finished...
-2019-12-05 11:53:13.409	: App imageFilter has started...
-2019-12-05 11:53:13.417	: [--f, blu:3|dilate:3, -o, out2]
-2019-12-05 11:53:13.428	: New output directory out2 created !
-2019-12-05 11:53:13.428	: Process started...
-input directory : imgs
-output directory : out2
-2019-12-05 11:53:13.428	: Files selected :
-2019-12-05 11:53:13.429	: image1.png
-2019-12-05 11:53:13.429	: image2.png
-2019-12-05 11:53:13.429	: image3.jpeg
-2019-12-05 11:53:13.43	: image1.png : Unknow blu filter !
-2019-12-05 11:53:16.745	: image1.png has been dilated !
-2019-12-05 11:53:16.745	: image1.png process finished !
-2019-12-05 11:53:16.746	: image2.png : Unknow blu filter !
-2019-12-05 11:53:16.749	: image2.png has been dilated !
-2019-12-05 11:53:16.749	: image2.png process finished !
-2019-12-05 11:53:16.749	: image3.jpeg : Unknow blu filter !
-2019-12-05 11:53:16.752	: image3.jpeg has been dilated !
-2019-12-05 11:53:16.752	: image3.jpeg process finished !
-2019-12-05 11:53:16.752	: Process finished !
-2019-12-05 11:53:16.752	: App imageFilter has finished...
-2019-12-05 11:53:48.819	: App imageFilter has started...
-2019-12-05 11:53:48.828	: [--f, blu:3|dilate:3, -h]
-2019-12-05 11:53:48.839	: App imageFilter has finished...
+2019-12-05 14:47:37.202	: File image.log created. path : /Users/antony/Documents/Java/imagefilter/image.log
+2019-12-05 14:47:37.209	: File config.ini created.
+2019-12-05 14:47:37.211	: App imageFilter has started...
+2019-12-05 14:47:37.211	: Command line : []
+2019-12-05 14:47:37.218	: New output directory output_imgs created !
+2019-12-05 14:47:37.218	: Process started...
+2019-12-05 14:47:37.218	: input directory : imgs
+2019-12-05 14:47:37.219	: output directory : output_imgs
+2019-12-05 14:47:37.219	: Files selected :
+2019-12-05 14:47:37.219	: image1.png
+2019-12-05 14:47:37.22	: image2.png
+2019-12-05 14:47:37.22	: image3.jpeg
+2019-12-05 14:47:40.691	: image1.png has been blured !
+2019-12-05 14:47:40.697	: image1.png has been turn in black & white !
+2019-12-05 14:47:40.697	: image1.png process finished !
+2019-12-05 14:47:40.7	: image2.png has been blured !
+2019-12-05 14:47:40.702	: image2.png has been turn in black & white !
+2019-12-05 14:47:40.702	: image2.png process finished !
+2019-12-05 14:47:40.704	: image3.jpeg has been blured !
+2019-12-05 14:47:40.706	: image3.jpeg has been turn in black & white !
+2019-12-05 14:47:40.706	: image3.jpeg process finished !
+2019-12-05 14:47:40.706	: Process finished !
+2019-12-05 14:47:40.706	: App imageFilter has finished...
+2019-12-05 14:48:13.838	: App imageFilter has started...
+2019-12-05 14:48:13.844	: Command line : [-cf, test.ini]
+2019-12-05 14:48:13.851	: File test.ini not found !
+2019-12-05 14:48:13.851	: App imageFilter has finished...
+2019-12-05 14:49:09.138	: App imageFilter has started...
+2019-12-05 14:49:09.145	: Command line : [-cf, test.ini]
+2019-12-05 14:49:09.154	: Process started...
+2019-12-05 14:49:09.154	: input directory : imgs
+2019-12-05 14:49:09.154	: output directory : output_imgs
+2019-12-05 14:49:09.155	: Files selected :
+2019-12-05 14:49:09.155	: image1.png
+2019-12-05 14:49:09.155	: image2.png
+2019-12-05 14:49:09.155	: image3.jpeg
+2019-12-05 14:49:12.547	: image1.png has been dilated !
+2019-12-05 14:49:12.552	: image1.png has been turn in black & white !
+2019-12-05 14:49:12.552	: image1.png process finished !
+2019-12-05 14:49:12.555	: image2.png has been dilated !
+2019-12-05 14:49:12.556	: image2.png has been turn in black & white !
+2019-12-05 14:49:12.557	: image2.png process finished !
+2019-12-05 14:49:12.559	: image3.jpeg has been dilated !
+2019-12-05 14:49:12.562	: image3.jpeg has been turn in black & white !
+2019-12-05 14:49:12.562	: image3.jpeg process finished !
+2019-12-05 14:49:12.562	: Process finished !
+2019-12-05 14:49:12.562	: App imageFilter has finished...

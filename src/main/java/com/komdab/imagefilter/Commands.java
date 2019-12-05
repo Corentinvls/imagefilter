@@ -3,6 +3,7 @@ package com.komdab.imagefilter;
 import org.apache.commons.cli.*;
 import org.ini4j.Ini;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -16,10 +17,12 @@ public class Commands {
         Option help = Option.builder("h").longOpt("help").desc("Return this message").build();
         Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
         Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
+        Option config = Option.builder("cf").longOpt("config-file").argName("file").desc("Select config.ini or log").hasArg().build();
         options.addOption(filter);
         options.addOption(help);
         options.addOption(input);
         options.addOption(output);
+        options.addOption(config);
     }
 
     public static CommandLine commandCreate(String[] args) throws ParseException {
@@ -31,14 +34,22 @@ public class Commands {
     public static void verifyCli(String[] args) {
         CommandLine line;
         try {
-            Ini ini = new Ini(new File("config.ini"));
-            logger = new Logger(ini.get("config", "logFile"));
+            Conf conf = new Conf("config.ini");
+
+            logger = new Logger(conf.fileLog);
+            if (conf.created) {
+                logger.write("File config.ini created.");
+            }
             Tools.annonce(true);
-            logger.write(Arrays.toString(args));
+            logger.write("Command line : " + Arrays.toString(args));
+
             line = Commands.commandCreate(args);
-            String[] filters = ini.get("config", "filters").split("\\|");
-            String input = ini.get("config", "inputDir");
-            String output = ini.get("config", "outputDir");
+            if (line.hasOption("cf")) {
+                conf = new Conf(line.getOptionValue("cf"));
+            }
+            String input = conf.input;
+            String output = conf.output;
+            String[] filters = conf.filters;
 
             if (line.hasOption("h")) {
                 Commands.help();
@@ -56,8 +67,7 @@ public class Commands {
                     return;
                 }
             }
-            if(!new File(input).exists())
-            {
+            if (!new File(input).exists()) {
                 String s = "Directory " + input + " not found !";
                 System.out.println(s);
                 logger.write(s);
@@ -72,27 +82,33 @@ public class Commands {
                     return;
                 }
             }
-            if(new File(output).mkdir())
-            {
+            if (new File(output).mkdir()) {
                 String s = "New output directory " + output + " created !";
                 System.out.println(s);
                 logger.write(s);
             }
 
-            String s = "Process started...\ninput directory : " + input + "\noutput directory : " + output;
+            String s = "Process started...";
+            System.out.println(s);
+            logger.write(s);
+            s = "input directory : " + input;
+            System.out.println(s);
+            logger.write(s);
+            s = "output directory : " + output;
             System.out.println(s);
             logger.write(s);
             Tools.process(input, output, filters);
             s = "Process finished !";
             System.out.println(s);
             logger.write(s);
+        } catch (FileNotFoundException e){
+            System.out.println(e.getMessage());
+            logger.write(e.getMessage());
         } catch (ParseException e) {
             String s = "Command error !";
             System.out.println(s);
             logger.write(s);
             System.out.println("Command error, wrong entry");
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
