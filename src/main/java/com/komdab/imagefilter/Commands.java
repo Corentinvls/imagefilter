@@ -190,7 +190,7 @@ public class Commands {
                             continue;
                     }
                 } catch (Exception e) {
-                    s = "An exception of type " + e.getClass() + " was throw !";
+                    s = "An exception of type " + e.getClass() + " was throw !\n" + e.getMessage();
                 }
                 System.out.println(s);
                 Commands.logger.write(s);
