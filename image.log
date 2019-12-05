@@ -359,3 +359,47 @@ output directory : output_imgs
 2019-12-05 14:43:34.736	: image3.jpeg process finished !
 2019-12-05 14:43:34.737	: Process finished !
 2019-12-05 14:43:34.737	: App imageFilter has finished...
+2019-12-05 14:46:39.384	: App imageFilter has started...
+2019-12-05 14:46:39.394	: [-lf]
+2019-12-05 14:46:39.407	: App imageFilter has finished...
+2019-12-05 14:48:41.009	: App imageFilter has started...
+2019-12-05 14:48:41.025	: [--f,, blu:3|dilate:3|grayscale|zeTeam]
+2019-12-05 14:48:41.037	: Command error !
+2019-12-05 14:48:41.037	: App imageFilter has finished...
+2019-12-05 14:49:00.548	: App imageFilter has started...
+2019-12-05 14:49:00.561	: [-f, blu:3|dilate:3|grayscale|zeTeam]
+2019-12-05 14:49:00.576	: Process started...
+input directory : imgs
+output directory : output_imgs
+2019-12-05 14:49:00.577	: Files selected :
+2019-12-05 14:49:00.577	: image1.png
+2019-12-05 14:49:00.578	: image2.png
+2019-12-05 14:49:00.579	: image3.jpeg
+2019-12-05 14:49:00.581	: image1.png : Unknow blu filter !
+2019-12-05 14:49:04.967	: image1.png has been dilated !
+2019-12-05 14:49:04.975	: image1.png has been turn in black & white !
+2019-12-05 14:49:06.635	: image1.png your team is forever engraved in our memories !
+2019-12-05 14:49:06.635	: image1.png process finished !
+2019-12-05 14:49:06.635	: image2.png : Unknow blu filter !
+2019-12-05 14:49:06.638	: image2.png has been dilated !
+2019-12-05 14:49:06.64	: image2.png has been turn in black & white !
+2019-12-05 14:49:06.642	: image2.png your team is forever engraved in our memories !
+2019-12-05 14:49:06.642	: image2.png process finished !
+2019-12-05 14:49:06.642	: image3.jpeg : Unknow blu filter !
+2019-12-05 14:49:06.649	: image3.jpeg has been dilated !
+2019-12-05 14:49:06.652	: image3.jpeg has been turn in black & white !
+2019-12-05 14:49:06.654	: image3.jpeg your team is forever engraved in our memories !
+2019-12-05 14:49:06.654	: image3.jpeg process finished !
+2019-12-05 14:49:06.654	: Process finished !
+2019-12-05 14:49:06.654	: App imageFilter has finished...
+2019-12-05 14:50:39.993	: App imageFilter has started...
+2019-12-05 14:50:40.003	: [-F, blur:3|dilate:3|grayscale|zeTeam]
+2019-12-05 14:50:40.016	: Command error !
+2019-12-05 14:50:40.016	: App imageFilter has finished...
+2019-12-05 14:52:15.73	: App imageFilter has started...
+2019-12-05 14:52:15.741	: [-lf]
+2019-12-05 14:52:15.756	: App imageFilter has finished...
+2019-12-05 14:53:30.125	: App imageFilter has started...
+2019-12-05 14:53:30.135	: [-lf]
+2019-12-05 14:53:30.142	: Command error !
+2019-12-05 14:53:30.143	: App imageFilter has finished...

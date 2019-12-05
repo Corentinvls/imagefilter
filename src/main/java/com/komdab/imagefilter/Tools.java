@@ -43,7 +43,7 @@ public class Tools {
                         case "grayscale":
                             Filter.grayscale(imagePath);
                             break;
-                        case "zeTeam":
+                        case "zeteam":
                             Filter.zeTeam(imagePath);
                             break;
                         default:
