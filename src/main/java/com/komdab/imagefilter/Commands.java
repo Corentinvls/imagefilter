@@ -1,6 +1,11 @@
 package com.komdab.imagefilter;
 
 import org.apache.commons.cli.*;
+import org.ini4j.Ini;
+import org.ini4j.InvalidFileFormatException;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Commands {
 
@@ -29,10 +34,11 @@ public class Commands {
         CommandLine line;
         try {
             line = Commands.commandCreate(args);
+            Ini ini = new Ini(new File("config.ini"));
 
-            String[] filters = null;
-            String input = "";
-            String output = "";
+            String[] filters = ini.get("config", "filters").split("\\|");
+            String input = ini.get("config", "inputDir");
+            String output = ini.get("config", "outputDir");
             if (line.hasOption("h")) {
                 Commands.help();
                 return;
@@ -57,6 +63,10 @@ public class Commands {
             Tools.process(input, output, filters);
         } catch (ParseException e) {
             System.out.println("Command error, wrong entry");
+        } catch (InvalidFileFormatException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
