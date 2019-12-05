@@ -12,7 +12,7 @@ public class Logger
 
     public  Logger()
     {
-        nameFile = "log.log";
+        nameFile = "image.log";
         file = new File(nameFile);
         try
         {

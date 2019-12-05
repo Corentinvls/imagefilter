@@ -14,12 +14,14 @@ public class Tools {
             for (String filter : filters) {
                 ImagePath imagePath = new ImagePath(input, outputDir, f.getName());
                 String[] args = filter.split(":");
-                int n = 0;
+                int n = 1;
                 if (args.length > 1) {
                     try {
                         n = Integer.parseInt(args[1]);
                     } catch (Exception e) {
-                        System.out.println("Invalid parameter. It's not an integer number !");
+                        String s = "Invalid parameter. Can't convert " + args[1] + " to an integer number !";
+                        System.out.println(s);
+                        App.logger.write(s);
                         return;
                     }
                 }
@@ -37,10 +39,16 @@ public class Tools {
                             break;
                     }
                 } catch (Exception e) {
-                    System.out.println("An exception of type " + e.getClass() + " was throw !");
+                    String s = "An exception of type " + e.getClass() + " was throw !";
+                    System.out.println(s);
+                    App.logger.write(s);
                 }
                 input = outputDir;
+
             }
+            String s = f.getName() + " process finished !";
+            System.out.println(s);
+            App.logger.write(s);
         }
     }
 
@@ -51,11 +59,15 @@ public class Tools {
         extensions.add("jpg");
         extensions.add("jpeg");
 
+        String s = "Files selected :";
+        System.out.println(s);
+        App.logger.write(s);
         for (File f : Objects.requireNonNull(new File(directory).listFiles())) {
             String[] t = f.getName().split("\\.");
             if (t.length > 1) {
                 if (extensions.indexOf(t[1]) != -1) {
                     System.out.println(f.getName());
+                    App.logger.write(f.getName());
                     files.add(f);
                 }
             }
