@@ -1,5 +1,8 @@
 package com.komdab.imagefilter;
 
+/**
+ * Class to collect image path
+ */
 public class ImagePath {
     private String pathIn;
     private String pathOut;

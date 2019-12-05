@@ -5,15 +5,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Timestamp;
 
+
+/**
+ * Class log operation
+ */
 public class Logger
 {
     private File file;
-    private String nameFile;
+    private String fileName;
 
-    public  Logger(String nameFile)
+    /**
+     *Constructor to create new log file
+     */
+    public  Logger(String fileName)
     {
-        this.nameFile = nameFile;
-        file = new File(this.nameFile);
+        this.fileName = fileName;
+        file = new File(this.fileName);
         try
         {
             if (file.createNewFile())
@@ -27,7 +34,7 @@ public class Logger
         }
         catch (IOException e)
         {
-            System.out.println("File " + nameFile + " can't be created !");
+            System.out.println("File " + fileName + " can't be created !");
         }
         finally
         {
@@ -35,6 +42,9 @@ public class Logger
         }
     }
 
+    /**
+     * Method to write message in log file
+     */
     public void write(String message)
     {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
