@@ -2,15 +2,11 @@ package com.komdab.imagefilter;
 
 import org.apache.commons.cli.*;
 import org.ini4j.Ini;
-import org.ini4j.InvalidFileFormatException;
-
 import java.io.File;
 import java.io.IOException;
-
 import java.util.Arrays;
 
 public class Commands {
-
     public static Logger logger;
     private static Options options;
 
@@ -33,7 +29,6 @@ public class Commands {
     }
 
     public static void verifyCli(String[] args) {
-
         CommandLine line;
         try {
             Ini ini = new Ini(new File("config.ini"));

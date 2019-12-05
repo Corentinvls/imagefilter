@@ -2,14 +2,12 @@ package com.komdab.imagefilter;
 
 import static org.bytedeco.opencv.global.opencv_imgproc.*;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
-
 import org.bytedeco.opencv.global.opencv_imgproc;
 import org.bytedeco.opencv.opencv_core.Mat;
 import org.bytedeco.opencv.opencv_core.Size;
 import org.opencv.imgproc.Imgproc;
 
 public class Filter {
-
     public static void blur(ImagePath imagePath, int size ) throws FilterException {
         if (size % 2 == 0) // si n pair
             throw new FilterException("Size argument must be an odd number !");

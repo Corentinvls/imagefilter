@@ -1,8 +1,5 @@
 package com.komdab.imagefilter;
 
-import java.io.File;
-import java.util.Objects;
-
 public class ImagePath {
     private String pathIn;
     private String pathOut;
@@ -14,28 +11,8 @@ public class ImagePath {
         this.fileName = fileName;
     }
 
-    public String getPathIn() {
-        return pathIn;
-    }
-
-    public void setPathIn(String pathIn) {
-        this.pathIn = pathIn;
-    }
-
-    public String getPathOut() {
-        return pathOut;
-    }
-
-    public void setPathOut(String pathOut) {
-        this.pathOut = pathOut;
-    }
-
     public String getFileName() {
         return fileName;
-    }
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
     }
 
     public String getImagePathIn() {

@@ -1,7 +1,5 @@
 package com.komdab.imagefilter;
 
-import org.bytedeco.opencv.presets.opencv_core;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
