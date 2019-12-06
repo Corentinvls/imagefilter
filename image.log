@@ -1,0 +1,160 @@
+2019-12-06 08:19:31.124	: File image.log created. path : /Users/ValloisCorentin/Documents/imagefilter/imagefilter/image.log
+2019-12-06 08:19:31.131	: App imageFilter has started...
+2019-12-06 08:19:31.131	: Command line : [--filters, blur:3|grayscale, -i, imgs, -o, output_imgs]
+2019-12-06 08:19:31.131	: Process started...
+2019-12-06 08:19:31.132	: input directory : imgs
+2019-12-06 08:19:31.132	: output directory : output_imgs
+2019-12-06 08:19:31.132	: Files selected :
+2019-12-06 08:19:31.133	: image1.png
+2019-12-06 08:19:31.133	: image2.png
+2019-12-06 08:19:31.133	: image3.jpeg
+2019-12-06 08:19:34.805	: image1.png has been blured !
+2019-12-06 08:19:34.812	: image1.png has been turn in black & white !
+2019-12-06 08:19:34.812	: image1.png process finished !
+2019-12-06 08:19:34.817	: image2.png has been blured !
+2019-12-06 08:19:34.819	: image2.png has been turn in black & white !
+2019-12-06 08:19:34.819	: image2.png process finished !
+2019-12-06 08:19:34.829	: image3.jpeg has been blured !
+2019-12-06 08:19:34.831	: image3.jpeg has been turn in black & white !
+2019-12-06 08:19:34.831	: image3.jpeg process finished !
+2019-12-06 08:19:34.831	: Process finished !
+2019-12-06 08:19:34.831	: App imageFilter has finished...
+2019-12-06 08:21:57.059	: App imageFilter has started...
+2019-12-06 08:21:57.075	: Command line : [--filters, blur:3|grayscale, -i, imgs, -o, output_imgs]
+2019-12-06 08:21:57.076	: Process started...
+2019-12-06 08:21:57.076	: input directory : imgs
+2019-12-06 08:21:57.076	: output directory : output_imgs
+2019-12-06 08:21:57.076	: Files selected :
+2019-12-06 08:21:57.077	: image1.png
+2019-12-06 08:21:57.077	: image2.png
+2019-12-06 08:21:57.077	: image3.jpeg
+2019-12-06 08:22:00.67	: image1.png has been blured ! size of blur: 3
+2019-12-06 08:22:00.678	: image1.png has been turn in black & white !
+2019-12-06 08:22:00.678	: image1.png process finished !
+2019-12-06 08:22:00.683	: image2.png has been blured ! size of blur: 3
+2019-12-06 08:22:00.685	: image2.png has been turn in black & white !
+2019-12-06 08:22:00.685	: image2.png process finished !
+2019-12-06 08:22:00.691	: image3.jpeg has been blured ! size of blur: 3
+2019-12-06 08:22:00.694	: image3.jpeg has been turn in black & white !
+2019-12-06 08:22:00.694	: image3.jpeg process finished !
+2019-12-06 08:22:00.694	: Process finished !
+2019-12-06 08:22:00.694	: App imageFilter has finished...
+2019-12-06 08:22:46.784	: App imageFilter has started...
+2019-12-06 08:22:46.795	: Command line : [--filters, blur:3|grayscale, -i, imgs, -o, output_imgs]
+2019-12-06 08:22:46.798	: Process started...
+2019-12-06 08:22:46.798	: input directory : imgs
+2019-12-06 08:22:46.799	: output directory : output_imgs
+2019-12-06 08:22:46.799	: Files selected :
+2019-12-06 08:22:46.8	: image1.png
+2019-12-06 08:22:46.8	: image2.png
+2019-12-06 08:22:46.8	: image3.jpeg
+2019-12-06 08:22:50.141	: image1.png has been blured ! size of blur: 3
+2019-12-06 08:22:50.146	: image1.png has been turn in black & white !
+2019-12-06 08:22:50.147	: image1.png process finished !
+2019-12-06 08:22:50.149	: image2.png has been blured ! size of blur: 3
+2019-12-06 08:22:50.151	: image2.png has been turn in black & white !
+2019-12-06 08:22:50.152	: image2.png process finished !
+2019-12-06 08:22:50.155	: image3.jpeg has been blured ! size of blur: 3
+2019-12-06 08:22:50.157	: image3.jpeg has been turn in black & white !
+2019-12-06 08:22:50.158	: image3.jpeg process finished !
+2019-12-06 08:22:50.158	: Process finished !
+2019-12-06 08:22:50.158	: App imageFilter has finished...
+2019-12-06 08:23:13.462	: App imageFilter has started...
+2019-12-06 08:23:13.471	: Command line : [--filters, blur:3|dilate:3|grayscale, -i, imgs, -o, output_imgs]
+2019-12-06 08:23:13.471	: Process started...
+2019-12-06 08:23:13.472	: input directory : imgs
+2019-12-06 08:23:13.472	: output directory : output_imgs
+2019-12-06 08:23:13.472	: Files selected :
+2019-12-06 08:23:13.472	: image1.png
+2019-12-06 08:23:13.473	: image2.png
+2019-12-06 08:23:13.473	: image3.jpeg
+2019-12-06 08:23:16.908	: image1.png has been blured ! size of blur: 3
+2019-12-06 08:23:16.925	: image1.png has been dilated ! size of dilate: 3
+2019-12-06 08:23:16.93	: image1.png has been turn in black & white !
+2019-12-06 08:23:16.93	: image1.png process finished !
+2019-12-06 08:23:16.933	: image2.png has been blured ! size of blur: 3
+2019-12-06 08:23:16.935	: image2.png has been dilated ! size of dilate: 3
+2019-12-06 08:23:16.937	: image2.png has been turn in black & white !
+2019-12-06 08:23:16.937	: image2.png process finished !
+2019-12-06 08:23:16.943	: image3.jpeg has been blured ! size of blur: 3
+2019-12-06 08:23:16.946	: image3.jpeg has been dilated ! size of dilate: 3
+2019-12-06 08:23:16.948	: image3.jpeg has been turn in black & white !
+2019-12-06 08:23:16.948	: image3.jpeg process finished !
+2019-12-06 08:23:16.948	: Process finished !
+2019-12-06 08:23:16.948	: App imageFilter has finished...
+2019-12-06 08:24:15.963	: App imageFilter has started...
+2019-12-06 08:24:15.97	: Command line : [--filters, blur:3|dilate:3|grayscale, -i, imgs, -o, output_imgs]
+2019-12-06 08:24:15.971	: Process started...
+2019-12-06 08:24:15.971	: input directory : imgs
+2019-12-06 08:24:15.971	: output directory : output_imgs
+2019-12-06 08:24:15.972	: Files selected :
+2019-12-06 08:24:15.972	: image1.png
+2019-12-06 08:24:15.972	: image2.png
+2019-12-06 08:24:15.972	: image3.jpeg
+2019-12-06 08:24:19.312	: image1.png has been blured ! size of blur: 3
+2019-12-06 08:24:19.322	: image1.png has been dilated ! size of dilate: 3
+2019-12-06 08:24:19.326	: image1.png has been turn in black & white !
+2019-12-06 08:24:19.326	: image1.png process finished !
+2019-12-06 08:24:19.33	: image2.png has been blured ! size of blur: 3
+2019-12-06 08:24:19.332	: image2.png has been dilated ! size of dilate: 3
+2019-12-06 08:24:19.333	: image2.png has been turn in black & white !
+2019-12-06 08:24:19.334	: image2.png process finished !
+2019-12-06 08:24:19.337	: image3.jpeg has been blured ! size of blur: 3
+2019-12-06 08:24:19.339	: image3.jpeg has been dilated ! size of dilate: 3
+2019-12-06 08:24:19.341	: image3.jpeg has been turn in black & white !
+2019-12-06 08:24:19.341	: image3.jpeg process finished !
+2019-12-06 08:24:19.341	: Filter process finished !
+2019-12-06 08:24:19.341	: App imageFilter has finished...
+2019-12-06 08:53:44.988	: App imageFilter has started...
+2019-12-06 08:53:44.997	: Command line : [--filters, blur:3|dilate:3|grayscale, -i, imga, -o, output_imgs]
+2019-12-06 08:53:44.998	: Process started...
+2019-12-06 08:53:44.998	: input directory : imga
+2019-12-06 08:53:44.998	: output directory : output_imgs
+2019-12-06 08:53:44.998	: Files selected :
+2019-12-06 08:53:44.999	: image1.png
+2019-12-06 08:53:44.999	: image2.png
+2019-12-06 08:53:44.999	: image3.jpeg
+2019-12-06 08:53:48.479	: image1.png has been blured ! size of blur: 3
+2019-12-06 08:53:48.492	: image1.png has been dilated ! size of dilate: 3
+2019-12-06 08:53:48.502	: image1.png has been turn in black & white !
+2019-12-06 08:53:48.502	: image1.png process finished !
+2019-12-06 08:53:48.505	: image2.png has been blured ! size of blur: 3
+2019-12-06 08:53:48.508	: image2.png has been dilated ! size of dilate: 3
+2019-12-06 08:53:48.509	: image2.png has been turn in black & white !
+2019-12-06 08:53:48.509	: image2.png process finished !
+2019-12-06 08:53:48.516	: image3.jpeg has been blured ! size of blur: 3
+2019-12-06 08:53:48.519	: image3.jpeg has been dilated ! size of dilate: 3
+2019-12-06 08:53:48.52	: image3.jpeg has been turn in black & white !
+2019-12-06 08:53:48.52	: image3.jpeg process finished !
+2019-12-06 08:53:48.521	: Filter process finished !
+2019-12-06 08:53:48.521	: App imageFilter has finished...
+2019-12-06 08:53:52.788	: App imageFilter has started...
+2019-12-06 08:53:52.797	: Command line : [--filters, blur:3|dilate:3|grayscale, -i, imga, -o, output_imgs]
+2019-12-06 08:53:52.799	: Process started...
+2019-12-06 08:53:52.8	: input directory : imga
+2019-12-06 08:53:52.8	: output directory : output_imgs
+2019-12-06 08:53:52.801	: Files selected :
+2019-12-06 08:53:52.802	: image1.png
+2019-12-06 08:53:52.802	: image2.png
+2019-12-06 08:53:52.802	: image3.jpeg
+2019-12-06 08:53:56.578	: image1.png has been blured ! size of blur: 3
+2019-12-06 08:53:56.59	: image1.png has been dilated ! size of dilate: 3
+2019-12-06 08:53:56.593	: image1.png has been turn in black & white !
+2019-12-06 08:53:56.593	: image1.png process finished !
+2019-12-06 08:53:56.596	: image2.png has been blured ! size of blur: 3
+2019-12-06 08:53:56.599	: image2.png has been dilated ! size of dilate: 3
+2019-12-06 08:53:56.602	: image2.png has been turn in black & white !
+2019-12-06 08:53:56.602	: image2.png process finished !
+2019-12-06 08:53:56.605	: image3.jpeg has been blured ! size of blur: 3
+2019-12-06 08:53:56.607	: image3.jpeg has been dilated ! size of dilate: 3
+2019-12-06 08:53:56.609	: image3.jpeg has been turn in black & white !
+2019-12-06 08:53:56.609	: image3.jpeg process finished !
+2019-12-06 08:53:56.609	: Filter process finished !
+2019-12-06 08:53:56.61	: App imageFilter has finished...
+2019-12-06 08:54:04.682	: App imageFilter has started...
+2019-12-06 08:54:04.69	: Command line : [--filters, blur:3|dilate:3|grayscale, -i, im, -o, output_imgs]
+2019-12-06 08:54:04.69	: Directory im not found !
+2019-12-06 08:54:04.69	: App imageFilter has finished...
+2019-12-06 08:55:38.382	: App imageFilter has started...
+2019-12-06 08:55:38.39	: Command line : [-h]
+2019-12-06 08:55:38.392	: App imageFilter has finished...

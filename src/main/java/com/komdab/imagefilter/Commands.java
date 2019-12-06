@@ -20,7 +20,7 @@ public class Commands {
      */
     private static void createOptions() {
         options = new Options();
-        Option filter = Option.builder("f").longOpt("filters").argName("filter name").desc("Select filter to apply in picture").hasArg().valueSeparator(':').build();
+        Option filter = Option.builder("f").longOpt("filters").argName("filter name").desc("Select filter to apply ").hasArg().valueSeparator(':').build();
         Option help = Option.builder("h").longOpt("help").desc("Return this message").build();
         Option input = Option.builder("i").longOpt("input-dir").argName("directory").desc("Select input directory from pictures").hasArg().build();
         Option output = Option.builder("o").longOpt("output-dir").argName("directory").desc("Select output directory from pictures").hasArg().build();
@@ -99,7 +99,7 @@ public class Commands {
                 }
             }
             if (!new File(input).exists()) {
-                String s = "Directory " + input + " not found !";
+                String s = "Directory: " + input + " not found !";
                 System.out.println(s);
                 logger.write(s);
                 return;
@@ -129,7 +129,7 @@ public class Commands {
             System.out.println(s);
             logger.write(s);
             process(input, output, filters);
-            s = "Process finished !";
+            s = "Filter process finished !";
             System.out.println(s);
             logger.write(s);
         } catch (FileNotFoundException e){
@@ -169,11 +169,11 @@ public class Commands {
                     switch (args[0].toLowerCase()) {
                         case "blur":
                             Filter.blur(imagePath, n);
-                            s = imagePath.getFileName() + " has been blured !";
+                            s = imagePath.getFileName() + " has been blured !" + " size of blur: "+ args[1];
                             break;
                         case "dilate":
                             Filter.dilate(imagePath, n);
-                            s = imagePath.getFileName() + " has been dilated !";
+                            s = imagePath.getFileName() + " has been dilated !"+ " size of dilate: "+ args[1];
                             break;
                         case "grayscale":
                             Filter.grayscale(imagePath);
